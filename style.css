@@ -1,0 +1,67 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: 'robot Condensed', cursive;
+
+}
+
+  body{
+    background: rgba(0, 0, 0,0);
+  }
+
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: 'robot Condensed', cursive;
+  margin:0px;
+}
+h1{
+  display: inline;
+}
+body h1 {
+  font-weight:300;
+margin:20px 30px;
+margin:40px 20
+padding:100px;
+height:200;
+width:100;
+
+#main-header {
+  border-bottom:2px solid #000
+}
+  body {
+    background: rgba(0, 100, 0,.9);
+}
+
+</style>
+<style>
+#top-stories{
+  width:1000px;
+  margin:auto;
+}
+</style>
+
+.article-image{
+ width: 100;
+ display: inline-block;
+ border: 1px solid #111;
+ padding: 10px;
+ margin:0px
+}
+<style>
+  textarea {
+    height: 100px; /* Set the height as needed */
+  }
+</style>
+
+.form{
+  width:50;
+  display: block;
+  padding:10px;
+  color:0000;
+  margin:10px
+}
+float:left
