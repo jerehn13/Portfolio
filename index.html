@@ -1,29 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jeremiah's Website</title>
-  <link href="style.css" rel="stylesheet" />
- 
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+<body style="background-color:lightgrey ;"
+
+<!-- Header -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#home">Jeremiah Essilfie</a>
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+              </ul>
+      </nav>
+              </section>
+        
+
+    </header>
+  </body>
+
 <body>
- 
-  <header id="main-header">  
-    <h1>Jeremiah</h1>
-  </header> 
-  
-  <img src="images.jpg" alt="girl with an angry face">
-  <h2>About Me</h2>
-  <p>My name is Jeremiah Essilfie and I would be specializing in showcasing most of my subjects through the use of HTML, JavaScript, and CSS.</p>
+  <section id="home">
+    <span>
+      
+    <img src="images.jpg" alt="Example image" style="display: inline-block;float: right;">
 
+    </span>
+<div class="detel">
+  <h1>I'm Jeremiah  <span>Essilfie</span></h1>
+  <p>this is my official portfolio website to showcase
+    <br>all my skills and projects  
+</p>
+<a href="#">Contact Me</a>
+</div>
+  </section>
+</body>
+   
+   
+    <!-- Portfolio Section -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Personal portfolio</p>
+                <p>Description of Project 1</p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Java script calculator</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Blog Section -->
+    <section id="blog">
+        <h2>Blog</h2>
+        <div id="blog-posts"></div>
+        <textarea id="new-post" placeholder="Write a new blog post..."></textarea>
+        <button onclick="addPost()">Add Post</button>
+    </section>
 
-  <footer>
-    <center>&copy;<br/>
-      <a href="#">Terms of Service</a>
-    </center>
-  </footer>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>   
+
+        <footer>
+          <center>&copy; 2024 Jeremiah Essilfie<br />
+          <a href="#">Terms of Service</a></center>
+        </footer>
 </body>
 </html>
