@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script src="script.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <head>
+  <script src="C:\Users\jereh\OneDrive\Pictures For projects\jquery-3.7.1.min.js"></script>
+  <script src="main.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
@@ -27,12 +34,11 @@
   </body>
 
 <body>
-  <section id="home">
-    <span>
-      
-    <img src="images.jpg" alt="Example image" style="display: inline-block;float: right;">
+<div class="images">
+  <img src="C:\Users\jereh\Downloads\Subject.png" class="boy">
+  <img src="C:\Users\jereh\Downloads\image_shape_guide.png" class="shape"> 
+  </div>
 
-    </span>
 <div class="detel">
   <h1>I'm Jeremiah  <span>Essilfie</span></h1>
   <p>this is my official portfolio website to showcase
@@ -42,60 +48,168 @@
 </div>
   </section>
 </body>
-   
-   
-    <!-- Portfolio Section -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Personal portfolio</p>
-                <p>Description of Project 1</p>
+
+
+
+<!-- Sidebar menu -->
+
+
+
+<!-- Skills Section -->
+<section id="skills" class="py-5">
+  <div class="container">
+      <h2 class="text-center mb-4">My Skills</h2>
+      <p class="text-center mb-4">Below are some of the technical and professional skills I possess:</p>
+      <div class="row justify-content-center">
+          <div class="col-md-4 text-center">
+              <h4>Web Development</h4>
+              <p>HTML, CSS, JavaScript</p>
+              <img src="C:\Users\jereh\OneDrive\Pictures For projects\11096817.png" class="card-img-top4" alt="Programing icon">
+          </div>
+          <div class="col-md-4 text-center">
+              <h4>Programming</h4>
+              <p>Python,C++</p>
+              
+<img src="C:\Users\jereh\OneDrive\Pictures For projects\267_Python-512.webp" class="card-img-top2" alt="Programing icon">
+          </div>
+          <div class="col-md-4 text-center">
+              <h4>Tools</h4>
+              <p>Git, GitHub, VS Code</p>
+              <img src="C:\Users\jereh\OneDrive\Pictures For projects\25231.png" class="card-img-top3" alt="Programing icon">
             </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Java script calculator</p>
+      </div>
+  </div>
+</section>
+
+
+  <!-- Portfolio Section -->
+  <section id="projects" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">My Projects</h2>
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="project1-thumbnail.jpg" class="card-img-top" alt="Project 1 Thumbnail">
+                    <div class="card-body">
+                        <h5 class="card-title">Personal Portfolio Website</h5>
+                        <p class="card-text">A responsive portfolio to showcase my skills and projects.</p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                        <a href="#" class="btn btn-secondary">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="project2-thumbnail.jpg" class="card-img-top" alt="Project 2 Thumbnail">
+                    <div class="card-body">
+                        <h5 class="card-title">JavaScript Calculator</h5>
+                        <p class="card-text">A simple calculator built with JavaScript for basic arithmetic operations.</p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                        <a href="#" class="btn btn-secondary">GitHub Repo</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+</body>
+
+ 
+<!-- Project 3 -->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <img src="project3-thumbnail.jpg" class="card-img-top" alt="Project 3 Thumbnail">
+        <div class="card-body">
+          <h5 class="card-title">Calculator</h5>
+          <p class="card-text">A simple calculator built with JavaScript for basic arithmetic operations.</p>
+          <a href="#" class="btn btn-primary">View Project</a>
+          <a href="#" class="btn btn-secondary">GitHub Repo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+   
 
     <!-- Blog Section -->
-    <section id="blog">
-        <h2>Blog</h2>
-        <div id="blog-posts"></div>
-        <textarea id="new-post" placeholder="Write a new blog post..."></textarea>
-        <button onclick="addPost()">Add Post</button>
-    </section>
+    <section id="blog" class="py-5">
+      <div class="container">
+          <h2 class="text-center mb-4">My Blog</h2>
+          <div id="blog-posts" class="mb-4">
+              <!-- Blog posts will appear here -->
+          </div>
+          <div>
+              <textarea id="new-post" class="form-control mb-3" placeholder="Write a new blog post..." rows="4"></textarea>
+              <button class="btn btn-primary" onclick="addPost()">Add Post</button>
+          </div>
+      </div>
+  </section>
+    
+      
+    <section>
+      <!-- Contact Section the working version --> 
+      <element class="form1">
+      <form id="form">
+        <div class="field">
+          <label for="from_name">Name</label>
+          <input type="text" name="from_name" id="from_name">
+        </div>
+        <div class="field">
+          <label for="from_email">Your Email</label>
+          <input type="text" name="to_name" id="to_name">
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <input type="text" name="message" id="message">
+        </div>
+    
+      
+        <input type="submit" id="button" value="Send Email" >
+      
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>   
+      </section>
+   
+   <!-- Contact Section the script version --> 
+      <script>
+        emailjs.init("srrtuuRTVuvimEXk9");
+    
+        const btn = document.getElementById("button");
+    
+        document.getElementById("form").addEventListener("submit", function (event) {
+          event.preventDefault();
+    
+          btn.textContent = "Sending...";
+    
+          const serviceID = "default_service";
+          const templateID = "template_y8706sc";
+    
+          emailjs.sendForm(serviceID, templateID, this).then(
+            () => {
+              btn.textContent = "Send Email";
+              alert("Email sent successfully!");
+            },
+            (err) => {
+              btn.textContent = "Send Email";
+              alert(`Failed to send email: ${JSON.stringify(err)}`);
+            }
+          );
+        });
+      </script>
+      
+   <body> 
+    <footer>
+<element class="footer">
+  <i>&copy; 2025 Jeremiah Essilfie</i>
+  <a href="#">Terms of Service</a>
+</footer>
 
-        <footer>
-          <center>&copy; 2024 Jeremiah Essilfie<br />
-          <a href="#">Terms of Service</a></center>
-        </footer>
-</body>
+   </body>
+   
 </html>
+
