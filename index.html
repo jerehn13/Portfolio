@@ -3,6 +3,7 @@
   <script src="script.js"></script>
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <head>
+
   <script src="C:\Users\jereh\OneDrive\Pictures For projects\jquery-3.7.1.min.js"></script>
   <script src="main.js"></script>
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
@@ -107,8 +108,9 @@
                 <div class="card">
                     <img src="project2-thumbnail.jpg" class="card-img-top" alt="Project 2 Thumbnail">
                     <div class="card-body">
-                        <h5 class="card-title">JavaScript Calculator</h5>
-                        <p class="card-text">A simple calculator built with JavaScript for basic arithmetic operations.</p>
+                        <h5 class="card-title">Dynamic Task manager</h5>
+                        <p class="card-text">A dynamic task manager application that allows users to
+                          create, edit, delete, and filter tasks.</p>
                         <a href="#" class="btn btn-primary">View Project</a>
                         <a href="#" class="btn btn-secondary">GitHub Repo</a>
                     </div>
@@ -127,8 +129,9 @@
       <div class="card">
         <img src="project3-thumbnail.jpg" class="card-img-top" alt="Project 3 Thumbnail">
         <div class="card-body">
-          <h5 class="card-title">Calculator</h5>
-          <p class="card-text">A simple calculator built with JavaScript for basic arithmetic operations.</p>
+          <h5 class="card-title">E-Commerce Product Page </h5>
+          <p class="card-text">A responsive e-commerce product page that displays
+            products from a public API.</p>
           <a href="#" class="btn btn-primary">View Project</a>
           <a href="#" class="btn btn-secondary">GitHub Repo</a>
         </div>
@@ -140,21 +143,102 @@
    
 
     <!-- Blog Section -->
-    <section id="blog" class="py-5">
-      <div class="container">
-          <h2 class="text-center mb-4">My Blog</h2>
-          <div id="blog-posts" class="mb-4">
-              <!-- Blog posts will appear here -->
-          </div>
-          <div>
-              <textarea id="new-post" class="form-control mb-3" placeholder="Write a new blog post..." rows="4"></textarea>
-              <button class="btn btn-primary" onclick="addPost()">Add Post</button>
-          </div>
+    <div class="blog-section">
+      <h2>Blog</h2>
+      <div class="blog-posts">
+        <!-- Blog posts will be dynamically added here -->
       </div>
-  </section>
+      <div class="new-post-form">
+        <h3>Create a New Post</h3>
+        <input type="text" placeholder="Post Title" id="post-title" />
+        <textarea placeholder="Post Content" id="post-content"></textarea>
+        <button onclick="savePost()">Publish</button>
+      </div>
+    </div>
     
-      
-    <section>
+    <script>
+      // Load blog posts from local storage
+      function loadBlogPosts() {
+        const blogPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+        const blogPostsContainer = document.querySelector('.blog-posts');
+        blogPostsContainer.innerHTML = '';
+    
+        blogPosts.forEach((post, index) => {
+          const postElement = document.createElement('div');
+          postElement.classList.add('blog-post');
+          postElement.innerHTML = `
+            <h3>${post.title}</h3>
+            <p>${post.content}</p>
+            <button class="remove-btn" onclick="removePost(${index})">Remove</button>
+          `;
+          blogPostsContainer.appendChild(postElement);
+        });
+      }
+    
+      // Save a new blog post to local storage
+      function savePost() {
+        const postTitle = document.getElementById('post-title').value;
+        const postContent = document.getElementById('post-content').value;
+    
+        const blogPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+        blogPosts.push({ title: postTitle, content: postContent });
+        localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
+    
+        loadBlogPosts();
+        document.getElementById('post-title').value = '';
+        document.getElementById('post-content').value = '';
+      }
+    
+      // Remove a blog post from local storage
+      function removePost(index) {
+        const blogPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+        blogPosts.splice(index, 1);
+        localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
+        loadBlogPosts();
+      }
+    
+      loadBlogPosts();
+    </script>
+    
+    <style>
+      .blog-section {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+    
+      .blog-post {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    
+      .remove-btn {
+        background-color: #dc3545;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    
+      .remove-btn:hover {
+        background-color: #c82333;
+      }
+    
+      .new-post-form {
+        margin-top: 20px;
+      }
+    
+      .new-post-form input,
+      .new-post-form textarea {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    </style>
       <!-- Contact Section the working version --> 
       <element class="form1">
       <form id="form">
@@ -203,6 +287,7 @@
           );
         });
       </script>
+  
 
    <body> 
     <footer>
@@ -210,8 +295,6 @@
   <i>&copy; 2025 Jeremiah Essilfie</i>
   <a href="#">Terms of Service</a>
 </footer>
-
    </body>
-   
 </html>
-
+ 
