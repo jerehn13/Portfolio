@@ -9,7 +9,7 @@
   color: #007bff; 
 }
 
-/* copilot */
+
 /* Center Align Content */
 .images, .detel {
     text-align: center;
@@ -22,7 +22,10 @@
     height: auto;
     border-radius: 50%;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
+
+
 .shape {
     max-width: 200px; /* Adjust size as needed */
     height: auto;
