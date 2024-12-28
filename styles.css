@@ -18,12 +18,13 @@
 
 /* Adjust Image Sizing */
 .boy {
-    max-width: 150px; /* Adjust size as needed */
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 20px;
+    width: 200px; /* Limit the size of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the image round */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Optional shadow for a professional touch */
+    border: 4px solid rgb(27, 25, 25); /* Optional border for a clean look */
     margin-top: 20px;
-}
+  }
 
 
 .shape {
@@ -106,7 +107,7 @@
     bottom: -10px;
     left: -10px;
     right: -10px;
-    background: linear-gradient(135deg, #007bff, #6c757d);
+    background: linear-gradient(135deg, #6c757d, #6c757d);
     z-index: -1;
     border-radius: 15px;
 }
@@ -222,3 +223,23 @@ button:focus {
     outline: none;
     border: none;  
 }
+a.btn.btn-secondary[href*="codepen"] {
+    background-color: black; /* Black background */
+    color: white; /* White text for contrast */
+    border: none; /* No border */
+    outline: none; /* Remove browser outline */
+    box-shadow: none; /* Remove any box shadow */
+  }
+  
+  a.btn.btn-secondary[href*="codepen"]:hover {
+    background-color: black; /* Maintain black on hover */
+    color: white; /* Maintain white text */
+  }
+  
+  a.btn.btn-secondary[href*="codepen"]:focus {
+    outline: none; /* Ensure no focus outline */
+    box-shadow: none; /* Ensure no box shadow */
+  }
+  
+
+  
