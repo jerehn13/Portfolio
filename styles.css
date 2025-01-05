@@ -82,6 +82,7 @@ html, body {
   }
 }
 
+
 /* General Styling */
 .images, .detel {
   text-align: center;
@@ -91,6 +92,7 @@ html, body {
 .boy, .shape, .card-img-top, .card-img-top2, .card-img-top3, .card-img-top4 {
   max-width: 100%; /* Prevent overflow */
   height: auto;
+  background-color: darkorange;
 }
 
 .boy {
@@ -401,6 +403,141 @@ a.btn.btn-secondary[href*="codepen"]:focus {
   transform: rotate(0);
 }
 
+.navbar-collapse {
+  width: 100%; /* Ensure the collapse section spans the full width */
+}
+
+
+
+.navbar-nav {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+}
+
 .navbar-toggler.collapsed .toggler-icon {
   background-color: #777777;
 }
+
+
+/* Media Queries for Additional Responsiveness */
+@media (max-width: 1024px) {
+    /* Adjust Navbar for Tablets and Smaller Desktops */
+    .navbar {
+      padding: 0.6rem 1rem;
+    }
+  
+    .navbar-brand {
+      font-size: 22px;
+    }
+  
+    .navbar-nav .nav-link {
+      padding: 0.6rem 1.2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Adjust Navbar for Small Devices */
+    .navbar-brand {
+      font-size: 20px;
+    }
+  
+    .navbar-nav .nav-link {
+      padding: 0.8rem;
+      text-align: left;
+    }
+  
+    .boy {
+      width: 150px;
+    }
+  
+    #skills {
+      padding: 15px;
+    }
+  
+    .card-img-top {
+      max-height: 120px;
+    }
+  
+    .blog-post {
+      margin-bottom: 10px;
+    }
+  
+    .new-post-form input,
+    .new-post-form textarea {
+      font-size: 0.9rem;
+    }
+  
+    .footer {
+      padding: 10px 0;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    /* Adjust for Mobile */
+    .navbar {
+      padding: 0.4rem 1rem;
+    }
+  
+    .navbar-brand {
+      font-size: 18px;
+    }
+  
+    .navbar-nav .nav-link {
+      padding: 0.6rem;
+      text-align: left;
+    }
+  
+    .boy {
+      width: 120px;
+    }
+  
+    #skills {
+      padding: 10px;
+    }
+  
+    .card-img-top {
+      max-height: 100px;
+    }
+  
+    .blog-post {
+      padding: 10px;
+    }
+  
+    .footer {
+      padding: 5px 0;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    /* Adjust for very small screens */
+    .navbar-nav .nav-link {
+      font-size: 0.8rem;
+      padding: 0.5rem;
+    }
+  
+    .boy {
+      width: 100px;
+    }
+  
+    #skills {
+      padding: 8px;
+    }
+  
+    .card-img-top {
+      max-height: 80px;
+    }
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
