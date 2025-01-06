@@ -114,6 +114,12 @@ html, body {
   transition: transform 0.3s ease;
 }
 
+.card-body{
+    background-color: darkorange;
+    border-color: black;
+}
+
+
 .card:hover {
   transform: translateY(-5px);
 }
@@ -122,6 +128,70 @@ html, body {
   max-height: 150px;
   object-fit: cover;
 }
+
+/* Portfolio Cards button styling */
+.card-body .btn-primary {
+    background-color: black;
+    color: white;
+    border: none;
+  }
+
+  .card-body .btn-primary:hover {
+    background-color: black;
+    transform: translateY(-2px);
+  }
+
+  .card-body .btn-secondary {
+    background-color: green;
+    color: white;
+    border: none;
+  }
+  .card-body .btn-secondary:hover{
+    background-color: green;
+    transform: translateY(-2px);
+  }
+  
+/* Styling for Netifly Button */
+.btn {
+    background-color: rgb(100, 50, 4); /* Background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+  }
+  
+  /* Hover effect */
+  .btn:hover {
+    background-color: rgb(120, 60, 24); /* Slightly lighter color on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+  }
+  
+  
+/* Button Styles */
+button:focus {
+    outline: none;
+    border: none;
+  }
+  
+  a.btn.btn-secondary[href*="codepen"] {
+    background-color: rgb(186,70,35);
+    color: white;
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+  
+  a.btn.btn-secondary[href*="codepen"]:hover {
+    background-color: rgb(186,70,35);
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  a.btn.btn-secondary[href*="codepen"]:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+
+
 
 /* Contact Form */
 #contact-form {
@@ -157,10 +227,10 @@ html, body {
 
 /* Skills Section */
 #skills {
-  border: 2px solid #007bff;
+  border: 2px solid black;
   border-radius: 10px;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: darkorange;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
   margin: 20px auto;
@@ -174,7 +244,7 @@ html, body {
   bottom: -10px;
   left: -10px;
   right: -10px;
-  background: linear-gradient(135deg, #6c757d, #6c757d);
+  background: black;
   z-index: -1;
   border-radius: 15px;
 }
@@ -184,10 +254,11 @@ html, body {
   max-width: 900px;
   margin: 30px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: green;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 
 .blog-section h2 {
   font-size: 2rem;
@@ -201,9 +272,10 @@ html, body {
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: darkorange;
   transition: all 0.3s ease;
 }
+
 
 .blog-post:hover {
   transform: translateY(-5px);
@@ -239,7 +311,7 @@ html, body {
 
 .new-post-form {
   margin-top: 30px;
-  background-color: #f9f9f9;
+  background-color: darkorange;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -256,9 +328,10 @@ html, body {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc (100,50,4);
   border-radius: 5px;
   font-size: 1rem;
+  background-color: rgb(100,50,4);
 }
 
 .new-post-form textarea {
@@ -267,7 +340,7 @@ html, body {
 }
 
 .new-post-form button {
-  background-color: #007bff;
+  background-color: rgb(186,70,35);
   color: white;
   padding: 10px 20px;
   border: none;
@@ -291,6 +364,11 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  background: darkgreen;
+}
+
+.submit-btn{
+    background: darkgoldenrod;
 }
 
 .field label {
@@ -305,6 +383,7 @@ html, body {
   min-width: 250px;
   line-height: 1.5;
   font-size: 14px;
+  background: rgb(186,70,35);
 }
 
 /* Footer */
@@ -328,30 +407,6 @@ html, body {
   color: #fff;
   padding: 10px;
   text-align: center;
-}
-
-/* Button Styles */
-button:focus {
-  outline: none;
-  border: none;
-}
-
-a.btn.btn-secondary[href*="codepen"] {
-  background-color: black;
-  color: white;
-  border: none;
-  outline: none;
-  box-shadow: none;
-}
-
-a.btn.btn-secondary[href*="codepen"]:hover {
-  background-color: black;
-  color: white;
-}
-
-a.btn.btn-secondary[href*="codepen"]:focus {
-  outline: none;
-  box-shadow: none;
 }
 
 /* Toggler Styles */
@@ -528,12 +583,8 @@ a.btn.btn-secondary[href*="codepen"]:focus {
     }
   }
 
+
   
-
-
-
-
-
 
 
 
