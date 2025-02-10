@@ -53,5 +53,12 @@ document.getElementById('emailButton').addEventListener('click', handleSendEmail
             console.log("Replacing...");
             $('#main').html(content);  // Replace the content
         }
+
+        
     });
+    
+
+
+    
+
     

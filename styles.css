@@ -9,6 +9,41 @@ html, body {
   box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
+/* my first picture */
+.image-container {
+  display: flex;
+  justify-content: center;  /* Centers the image horizontally */
+  align-items: center;  /* Centers vertically */
+  height: 90vh; /* Reduce height to move image up */
+  margin-top: -30px; /* Moves the image up */
+}
+
+.profile-image {
+  width: 600px;  /* Adjust size to fit your layout */
+  height: 600px;  /* Ensures it's a perfect circle */
+  border-radius: 50%;  /* Makes the image circular */
+  object-fit: cover;  /* Ensures the image scales properly within the circle */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Optional: Adds a soft shadow */
+}
+
+/* about me text */
+.detel {
+  text-align: center; /* Ensures text is centered */
+  margin-top: 60px; /* Moves the text lower */
+}
+
+.detel h1 {
+  font-size: 3rem; /* Adjust size - try 3rem, 4rem, etc. */
+  font-weight: bold; /* Makes it stand out */
+  text-align: center; /* Ensures it's centered */
+}
+
+
+
+
+
+
+
 /* Navbar Styling */
 .navbar {
   padding: 0.8rem 1rem;
@@ -226,164 +261,241 @@ button:focus {
 }
 
 /* Skills Section */
-#skills {
-  border: 2px solid black;
-  border-radius: 10px;
-  padding: 20px;
-  background-color: darkorange;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-  margin: 20px auto;
-  max-width: 800px;
+
+.skills-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
 }
 
-#skills::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  bottom: -10px;
-  left: -10px;
-  right: -10px;
-  background: black;
-  z-index: -1;
-  border-radius: 15px;
+/* Container for skills (Shift content to the right) */
+.skills-container {
+  display: flex;
+  justify-content: flex-start;  /* Align items to the left initially */
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-left: 80px;  /* Moves the content to the right */
 }
+
+/* Styling for each skill card */
+.skill-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 200px;
+}
+
+/* Adjusting the skill images */
+.skill-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
 
 /* Blog Section */
+/* Blog Section */
 .blog-section {
-  max-width: 900px;
+  max-width: 700px; /* Increased width */
   margin: 30px auto;
   padding: 20px;
   background-color: green;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
 }
 
-
+/* Blog Title */
 .blog-section h2 {
-  font-size: 2rem;
+  font-size: 2rem; /* Bigger font */
   color: #333;
   text-align: center;
   margin-bottom: 20px;
 }
 
+/* Blog Post */
 .blog-post {
-  border: 1px solid #eee;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  background-color: darkorange;
+  max-width: 800px; /* Reduce width to make it smaller */
+  padding: 10px; /* Decrease padding */
+  margin: 10px auto; /* Center and reduce spacing */
+  border-radius: 10px;
+  background-color: black;
   transition: all 0.3s ease;
 }
 
 
 .blog-post:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1);
 }
 
 .blog-post h3 {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Increased title font */
   color: #333;
   margin-bottom: 10px;
 }
 
 .blog-post p {
   color: #555;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.2rem; /* Bigger text */
+  line-height: 1.6;
 }
 
+/* Remove Button */
 .blog-post button.remove-btn {
-  background-color: #dc3545;
-  color: #fff;
+  background-color: white;
+  color: black;
   border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 10px 16px; /* Bigger button */
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1.1rem; /* Bigger font */
   transition: background-color 0.3s ease;
 }
 
 .blog-post button.remove-btn:hover {
-  background-color: #c82333;
+  background-color: white;
+  color: black;
 }
 
+/* 📌 Wider New Post Form with Black Border */
 .new-post-form {
-  margin-top: 30px;
-  background-color: darkorange;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px; /* Increased width */
+  margin: 50px auto; /* Centering form */
+  background-color: white; /* Form background is white */
+  padding: 35px; /* More padding */
+  border-radius: 12px;
+  border: 5px solid black; /* Added black border */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 .new-post-form h3 {
-  font-size: 1.5rem;
+  font-size: 2rem; /* Bigger title */
   color: #333;
-  margin-bottom: 15px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .new-post-form input,
 .new-post-form textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc (100,50,4);
-  border-radius: 5px;
-  font-size: 1rem;
-  background-color: rgb(100,50,4);
+  padding: 16px; /* Increased padding */
+  margin-bottom: 20px;
+  border: 2px solid black; /* Black border for inputs */
+  border-radius: 10px;
+  font-size: 1.4rem; /* Bigger text */
+  background-color: white;
+  color: black;
 }
 
 .new-post-form textarea {
-  height: 150px;
+  height: 200px; /* Increased height */
   resize: none;
 }
 
 .new-post-form button {
-  background-color: rgb(186,70,35);
+  background-color: black;
   color: white;
-  padding: 10px 20px;
+  padding: 16px 24px; /* Bigger button */
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1.4rem; /* Bigger font */
   transition: background-color 0.3s ease;
 }
 
 .new-post-form button:hover {
-  background-color: #0056b3;
+    background-color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-section {
+    max-width: 95%;
+  }
+
+  .new-post-form {
+    max-width: 600px; /* Scales form for mobile */
+  }
+}
+
+
+
+
+
+
+
+/* Form Styling */
+/* Contact Section Container */
+.form-container {
+  max-width: 600px; /* Keeps the container slightly smaller */
+  margin: 0 auto;
+  padding: 35px; /* Adjusted padding to keep balance */
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 4px solid black;
+  position: relative;
+  left: 10px; /* Moves everything slightly to the right */
+  display: flex;
+  justify-content: center; /* Centers the form inside the container */
+  align-items: center;
+  flex-wrap: wrap; /* Ensures responsiveness */
 }
 
 /* Form Styling */
 #form {
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: none;
   width: 100%;
-  max-width: 300px;
+  max-width: 400px; /* Form stays smaller in the center */
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  background: darkgreen;
+  gap: 20px;
+  background: white;
 }
 
-.submit-btn{
-    background: darkgoldenrod;
+/* Submit Button */
+.submit-btn {
+  background: black;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
+.submit-btn:hover {
+  background: darkgray;
+  color: black;
+}
+
+/* Field Labels */
 .field label {
   display: table;
-  font-size: 16px;
+  font-size: 18px;
   color: black;
   width: fit-content;
 }
 
-.field input {
+/* Input Fields */
+.field input,
+.field textarea {
   display: block;
-  min-width: 250px;
-  line-height: 1.5;
-  font-size: 14px;
-  background: rgb(186,70,35);
+  width: 100%; /* Ensures full width responsiveness */
+  max-width: 350px; /* Keeps fields from being too wide */
+  line-height: 1.6;
+  font-size: 16px;
+  padding: 8px;
+  background: white;
+  border-radius: 6px;
+  border: 3px solid black;
 }
 
 /* Footer */
@@ -396,18 +508,52 @@ button:focus {
   margin: 0;
 }
 
-/* Ensure Proper Alignment for Form */
+/* Moves the Entire Form Section */
 .form1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   width: 100%;
   background-color: none;
   color: #fff;
   padding: 10px;
   text-align: center;
+  left: 30px; /* Moves everything slightly to the right */
 }
+
+/* 🔹 Responsive Design for Mobile & Tablets */
+@media (max-width: 768px) {
+  .form-container {
+    max-width: 90%; /* Adjusts container width for smaller screens */
+    left: 0; /* Centers it properly */
+    padding: 25px;
+  }
+
+  #form {
+    max-width: 100%; /* Makes form take up full width */
+  }
+
+  .field input,
+  .field textarea {
+    max-width: 100%; /* Ensures full width responsiveness */
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  .submit-btn {
+    font-size: 1rem; /* Slightly smaller button text on mobile */
+  }
+}
+
+
+
+
+
+
 
 /* Toggler Styles */
 .navbar-toggler {
@@ -590,5 +736,349 @@ button:focus {
 
 
 
+
+
+/* About Section Styling */
+#about {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Change background color if needed */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  padding: 20px;
+  gap: 50px; /* Space between text and image */
+}
+
+/* About Text Styling */
+/* About Text Styling */
+.about-content {
+  flex: 1;
+  max-width: 600px;
+  margin-left: 80px; /* Moves the content slightly to the right */
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+  border-left: 5px solid black; /* Left green bar */
+  padding-left: 15px;
+}
+
+/* About Image Styling */
+
+
+
+/* About Image Styling */
+.about-image img {
+  width: 400px;
+  height: 420px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-left: 50px; /* Moves the image slightly to the right */
+  max-width: 100%; /* Ensures image scales properly on smaller screens */
+  height: auto; /* Maintains aspect ratio */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-content {
+    margin-left: 40px; /* Slightly reduce spacing on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .about-image img {
+    width: 250px; /* Smaller image on mobile */
+    height: auto; /* Keeps aspect ratio */
+    margin-left: 0; /* Center the image */
+  }
+}
+
+
+
+
+
+
+
+.contact-section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contact-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.contact-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 180px;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+
+/* Social Links Container */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+/* Restrict the size of the icons */
+.social-icon {
+  width: 40px;  /* Adjust the size */
+  height: 40px; /* Adjust the size */
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Project Section */
+#projects {
+  text-align: center;
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+/* Title: Centered, Big, Bold */
+.project-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px; /* Space between title and project cards */
+}
+
+/* Project Container: Display in Row */
+.project-container {
+  display: flex;
+  justify-content: center; /* Centers the projects */
+  gap: 20px; /* Space between projects */
+  flex-wrap: wrap; /* Makes it responsive */
+}
+
+/* Project Card */
+.project-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 30%; /* Each project takes 30% of the row */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  border: 2px solid #000;
+}
+
+/* Hover Effect */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Image */
+.project-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Project Title */
+.project-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Project Description */
+.project-card p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Project Buttons */
+.project-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #000;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 1rem;
+  transition: 0.3s;
+  margin: 5px;
+}
+
+/* GitHub Button */
+.github-btn {
+  background: #333;
+}
+
+.project-btn:hover {
+  background: #555;
+}
+
+.project-card {
+    transition: filter 0.5s ease-in-out, transform 0.3s ease-in-out;
+    filter: brightness(1);
+}
+
+.project-card:hover {
+    filter: brightness(0.5);
+}
+
+
+
+/* Responsive: Stack projects in a column on smaller screens */
+@media (max-width: 992px) {
+  .project-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .project-card {
+      width: 80%;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Custom scroll bar */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+  background: #e0e0e0; /* Light gray track */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+  background: black; /* Green scrollbar handle */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Scrollbar Handle on Hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #218838; /* Darker green on hover */
+}
+
+
+
+
+
+
+.cert-link {
+  display: block; /* Makes it appear below the content */
+  margin-top: 10px; /* Adds space between the text and the link */
+  text-align: center; /* Centers the link */
+  font-size: 14px;
+  font-weight: bold;
+  color: black; /* Black text */
+  text-decoration: none; /* Removes underline */
+  border: 2px solid black; /* Adds a black border */
+  padding: 5px 10px;
+  border-radius: 5px; /* Slightly rounded corners */
+  transition: all 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.cert-link:hover {
+  background-color: black; /* Turns black on hover */
+  color: white; /* Text turns white */
+}
 
 
