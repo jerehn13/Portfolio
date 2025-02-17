@@ -9,6 +9,12 @@ html, body {
   box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
+
+.navbar-brand {
+  margin-left: 5px; /* Moves 'Jeremiah' slightly to the right */
+}
+
+
 /* my first picture */
 .image-container {
   display: flex;
@@ -38,9 +44,13 @@ html, body {
   text-align: center; /* Ensures it's centered */
 }
 
-
-
-
+/* Bootstrap navbar category text color*/
+.nav-item,
+.nav-link {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
 
 
 
@@ -445,6 +455,20 @@ button:focus {
   align-items: center;
   flex-wrap: wrap; /* Ensures responsiveness */
 }
+ /* Bootstrap navbar categories border */
+.navbar-nav .nav-item {
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Light black border */
+  border-radius: 5px; /* Slightly rounded corners */
+  padding: 5px 10px; /* Spacing inside */
+  margin: 5px; /* Spacing between items */
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item:hover {
+  border-color: rgba(0, 0, 0, 0.5); /* Darker on hover */
+  background-color: rgba(0, 0, 0, 0.05); /* Light hover effect */
+}
+
 
 /* Form Styling */
 #form {
@@ -1054,10 +1078,12 @@ button:focus {
 
 /* Scrollbar Handle on Hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #218838; /* Darker green on hover */
+  background: black; /* Darker green on hover */
 }
-
-
+/* bootstrap navbar border bottom black  */
+.navbar {
+  border-bottom: 3px solid black !important; /* Adjust thickness as needed */
+}
 
 
 
