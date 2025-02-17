@@ -1082,8 +1082,10 @@ button:focus {
 }
 /* bootstrap navbar border bottom black  */
 .navbar {
-  border-bottom: 3px solid black !important; /* Adjust thickness as needed */
+  border-bottom: 3px solid rgba(0, 0, 0, 0.8) !important; /* Softer black */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds depth */
 }
+
 
 
 
