@@ -60,6 +60,9 @@ html, body {
 .navbar {
   padding: 0.8rem 1rem;
   width: 100%; /* Ensure navbar doesn't overflow */
+  border: none !important;
+  box-shadow: none !important;
+  background-color: white;
 }
 
 .navbar-brand {
